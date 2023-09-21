@@ -556,3 +556,21 @@ main{
     }
     
 }
+#portioflio{
+    padding: 70px 30px;
+    background-image: url(./img/backgroud.jpg);
+}
+
+#portifolio .port-content{
+    
+    margin-top: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px;
+}
+
+#portifolio .port-content .port-item{
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+}
