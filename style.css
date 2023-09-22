@@ -220,6 +220,13 @@ main{
 #home .home-content p span{
     border-bottom: 4px solid var(--themeColor);
 }
+#home .home-content i{
+    color: var(--themeColor);
+}
+
+#home .home-content i > p{
+    border-bottom: 4px solid var(--themeColor);
+}
 
 @media only screen and (max-width: 670px) {
     #home{
@@ -279,6 +286,7 @@ main{
 
 #sobre .sobre-col .img-sobre img{
     width: 100%;
+    border-radius: 10%;
 }
 
 #sobre .sobre-col .text-sobre{
@@ -419,30 +427,6 @@ main{
     }
 }
 
-#sobre .skill-content{
-    margin-top: 35px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
-
-#sobre .skill-content .skill-box{
-    display: flex;
-    color: var(--sideBgColor);
-    align-items: center;
-    font-weight: 600;
-    font-size: 15px;
-    font-style: italic;
-    justify-content: space-between;
-    margin-bottom: 4px;
-}
-@media only screen and (max-width: 450px){
-    #sobre .skill-content{
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 10px;
-    }
-}
-
 #sobre .resume-content{
     display: flex;
     justify-content: space-between;
@@ -556,21 +540,105 @@ main{
     }
     
 }
-#portioflio{
-    padding: 70px 30px;
-    background-image: url(./img/backgroud.jpg);
-}
 
-#portifolio .port-content{
-    
+#sobre .port-content{
     margin-top: 50px;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 35px;
 }
 
-#portifolio .port-content .port-item{
+#sobre .port-content .port-item{
     position: relative;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+}
+
+#sobre .port-content .port-item .port-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+#sobre .port-content .port-item .port-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--themeColor);
+    padding: 0 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transform: scale(0);
+    transition: 0.3s;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+#sobre .port-content .port-item:hover .port-info{
+    transform: scale(1);
+    visibility: visible;
+}
+
+#sobre .port-content .port-item:hover .port-info h4{
+    color: var(--sideBgColor);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#sobre .port-content .port-item:hover .port-info p{
+    color: var(--iconBgColor);
+    font-size: 10px;
+}
+
+#sobre .port-content .port-item:hover .port-info a{
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    background-color: var(--iconBgColor);
+    border-radius: 50%;
+    color: var(--themeColor);
+    line-height: 46px;
+    transition: 0.4s;
+}
+
+#sobre .port-content .port-item:hover .port-info a:hover{
+    background-color: var(--sideBgColor);
+}
+
+@media only screen and (max-width: 650px){  
+
+    #sobre .port-content .port-item:hover .port-info h4{
+        font-size: 25px;
+        font-weight: 500;
+    }
+    
+    #sobre .port-content .port-item:hover .port-info p{
+        color: var(--iconBgColor);
+        font-size: 12px;
+    }
+    #sobre .port-content{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 360px){
+    #sobre .port-content{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+
 }
