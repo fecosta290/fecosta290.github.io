@@ -1,20 +1,20 @@
 /*FONT*/
-@import url('https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,600;1,300&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Skranji',sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 
 /*global*/
 :root{
     --sideBgColor: #040b14;
-    --themeColor: #f6e368;
+    --themeColor: #3e974d;
     --iconBgColor: #2C2F3F;
-    --textColor: #353535;
-    --bgColor: #F7F7F7;
+    --textColor:  #111111;
+    --bgColor: #353535;
 }
 
 
@@ -126,7 +126,7 @@ header .footer{
     font-size: 20px;
     width: 40px;
     height: 40px;
-    color: white;
+    color: lightgray;
     background-color: var(--themeColor);
     text-align: center;
     line-height: 42px;
@@ -200,7 +200,7 @@ main{
 
 #home .home-content h1{
     font-size: 60px;
-    color: white;
+    color:lightgray;
     font-weight: 600;
     letter-spacing: -1px;
     margin-bottom: 10px;
@@ -254,7 +254,7 @@ main{
     padding: 70px 30px;
 }
 
-.sub-heading{
+#sobre .sub-heading{
     color: black;
     font-size: 30px;
     margin-bottom: 10px;
@@ -266,8 +266,13 @@ main{
     background-color: var(--themeColor);
     border-radius: 3px;
 }
+
+#sobre p{
+ color: lightgray;
+}
+
 .sub-para{
-    color: var(--textColor);
+    color: lightgray;
     font-size: 15px;
     letter-spacing: 0.4px;
     font-weight: 500;
@@ -302,8 +307,8 @@ main{
     margin-top: -10px;
 }
 
-#sobre .sobre-col .text-sobre p{
-    color: var(--textColor);
+#sobre .sobre-col .txt-sobre p {
+    color: lightgray;
     font-size: 15px;
     letter-spacing: 0.5px;
     font-style: italic;
@@ -329,7 +334,7 @@ main{
     margin-right: 2px;
 }
 #sobre .sobre-col .icon-list-col .icon-list ul li span{
-    color: var(--textColor);
+    color: lightgray;
     font-weight: 500;
     font-size: 14px;
 }
@@ -382,51 +387,6 @@ main{
         width: 100%;
     }
 }
-
-#sobre .fatos-content{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px;
-    margin-top: 50px;
-}
-
-#sobre .fatos-content .fatos-box i{
-    color: var(--themeColor);
-    font-size: 40px;
-}
-#sobre .fatos-content .fatos-box strong{
-    color: var(--sideBgColor);
-    margin-left: 5px;
-    font-weight: 600;
-}
-
-#sobre .fatos-content .fatos-box p{
-    color: var(--textColor);
-    font-weight: 500;
-    font-size: 16px;
-}
-
-@media only screen and (max-width: 700px){
-    #sobre .fatos-content{    
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
-    margin-top: 50px;
-    }
-}
-
-@media only screen and (max-width: 370px){
-    #sobre .fatos-content .fatos-box i{
-        font-size: 30px;
-    }
-    #sobre .fatos-content .fatos-box strong{
-        font-size: 20px;
-    }
-    
-    #sobre .fatos-content .fatos-box p{
-        font-size: 14px;
-    }
-}
-
 #sobre .resume-content{
     display: flex;
     justify-content: space-between;
@@ -460,7 +420,7 @@ main{
 }
 
 #sobre .resume-content .resume-col .my-edu p{
-    color: var(--textColor);
+    color: lightgray;
     font-size: 15px;
     font-weight: 600;
     font-style: italic;
@@ -470,6 +430,11 @@ main{
 #sobre .resume-content .resume-col .my-edu span{
     color: var(--textColor);
 }
+
+#sobre .resume-content .resume-col .my-edu ul li{
+    color: lightgray;
+}
+
 
 #sobre .resume-content .resume-col .pro-exp{
     padding: 0 20px 0 20px;
@@ -504,7 +469,7 @@ main{
 }
 
 #sobre .resume-content .resume-col .pro-exp h3{
-    color: var(--sideBgColor);
+    color: lightgray;
     font-size: 17px;
     font-weight: 600;
     text-transform: uppercase;
@@ -515,7 +480,7 @@ main{
 }
 
 #sobre .resume-content .resume-col .pro-exp p{
-    color: var(--textColor);
+    color: lightgray;
     font-size: 15px;
     font-weight: 600;
     font-style: italic;
@@ -525,7 +490,7 @@ main{
 #sobre .resume-content .resume-col .pro-exp ul li{
     margin: 10px 0;
     margin-left: 20px;
-    color: var(--textColor);
+    color: lightgray;
     font-size: 15px;
     font-weight: 500;
 }
@@ -539,64 +504,52 @@ main{
         flex-basis: 100%;
     }
     
+  }
+
+#projetos .divider{
+    width: 80px;
+    height: 4px;
+    background-color: var(--themeColor);
+    border-radius: 3px;
 }
 
-#sobre .port-content{
+#projetos .port-content{
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 35px;
 }
 
-#sobre .port-content .port-item{
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+#projetos .port-content .port-item{
+    width: 190px;
+    height: 254px;
+    background: #f5f5f5;
+    padding: 2rem 1.5rem;
+    transition: box-shadow .3s ease, transform .2s ease;
+
 }
 
-#sobre .port-content .port-item .port-img img{
-    width: 100%;
-    border-radius: 10px;
-}
-
-#sobre .port-content .port-item .port-info{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--themeColor);
-    padding: 0 15px;
-    text-align: center;
+#projetos .port-content .port-item .port-info{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    transform: scale(0);
-    transition: 0.3s;
-    border-radius: 10px;
-    visibility: hidden;
-}
-
-#sobre .port-content .port-item:hover .port-info{
-    transform: scale(1);
+    transition: transform .2s ease, opacity .2s ease; transform: scale(1);
     visibility: visible;
 }
 
-#sobre .port-content .port-item:hover .port-info h4{
+#projetos .port-content .port-item .port-info h4{
     color: var(--sideBgColor);
     font-size: 25px;
     font-weight: 600;
 }
 
-#sobre .port-content .port-item:hover .port-info p{
+#projetos .port-content .port-item .port-info p{
     color: var(--iconBgColor);
     font-size: 10px;
 }
 
-#sobre .port-content .port-item:hover .port-info a{
+#projetos .port-content .port-item .port-info a{
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
@@ -609,22 +562,22 @@ main{
     transition: 0.4s;
 }
 
-#sobre .port-content .port-item:hover .port-info a:hover{
+#projetos .port-content .port-item .port-info a:hover{
     background-color: var(--sideBgColor);
 }
 
 @media only screen and (max-width: 650px){  
 
-    #sobre .port-content .port-item:hover .port-info h4{
+    #projetos .port-content .port-item .port-info h4{
         font-size: 25px;
         font-weight: 500;
     }
     
-    #sobre .port-content .port-item:hover .port-info p{
+    #projetos .port-content .port-item .port-info p{
         color: var(--iconBgColor);
         font-size: 12px;
     }
-    #sobre .port-content{
+    #projetos .port-content{
         margin-top: 50px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -634,11 +587,85 @@ main{
 }
 
 @media only screen and (max-width: 360px){
-    #sobre .port-content{
+    #projetos .port-content{
         margin-top: 50px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 15px;
     }
 
+}
+
+#contact{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px;
+    position: relative;
+}
+
+#contact::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--textColor);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#contact .contact-content{
+    z-index: 1;
+}
+
+#contact .contact-content h1{
+    font-size: 60px;
+    color:lightgray;
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    line-height: 70px;
+}
+
+#contact .contact-content span{
+    color: var(--themeColor);
+}
+
+#contact .contact-content p{
+    color: whitesmoke;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#contact .contact-content p span{
+    border-bottom: 4px solid var(--themeColor);
+}
+#contact .contact-content i{
+    color: var(--themeColor);
+}
+
+#contact .contact-content i > p{
+    border-bottom: 4px solid var(--themeColor);
+}
+
+@media only screen and (max-width: 670px) {
+    #contact{
+        padding: 30px;
+    }
+    #contact .contact-content h1{
+        font-size:35;
+        letter-spacing: 0;
+        line-height: 50px;
+    }
+    #contact .contact-content br{
+        display: none;
+    }
+    #contact .contact-content p{
+        font-size: 20px;
+        font-weight: 400;
+    }
 }
